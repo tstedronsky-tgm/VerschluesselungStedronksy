@@ -24,6 +24,6 @@ public class SubstitutionCipher extends MonoAlphabeticCipher {
 	@Override
 	public void setSecretAlphabet(String secretAlphabet) {	
 		//Methode wird von MonoAlphabeticCipheraufgerufen.
-		setSecretAlphabet(secretAlphabet); 
+		super.setSecretAlphabet(secretAlphabet); 
 	}
 }
