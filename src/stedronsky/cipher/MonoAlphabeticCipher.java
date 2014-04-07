@@ -27,9 +27,12 @@ public class MonoAlphabeticCipher implements Cipher {
 	 * Setter Methode für das Geheimalphabet
 	 * @param secretAlphabetneues secretAlphabet
 	 */
-	void setSecretAlphabet(String secretAlphabet) {
+	void setSecretAlphabet(String secretAlphabet) throws IllegalArgumentException{
 		if(secretAlphabet.length()==30){ //Es wird geprüft ob das neue secretAlphabet die entsprechende Anzahl an Zeichen besitzt.
 			this.secretAlphabet=secretAlphabet;
+		}
+		else {
+			throw new IllegalArgumentException("Fehler beim setzen des SecretAlphabets");
 		}
 	}
 	
